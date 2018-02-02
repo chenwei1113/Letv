@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .slidefull{
+            width: 200px;
+            height: 220px;
+            background: pink;
+            margin: 100px auto;
+            position: relative;
+        }
+        .slidewrap {
+            width: 600px;
+            height: 200px;
+            /*position: absolute;*/
+            background: #333;
+            transform: translateX(-200px);
+        }
+        .slide-ele {
+            width: 200px;
+            height: 100%;
+            background: red;
+            float: left;
+        }
+        .slide1 {
+            background: green;
+        }
+        .slide2{
+            background: blue;
+        }
+        .slide3 {
+            /*transform: translateX(-200px);*/
+            background: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slidefull">
+        <div class="slidewrap">
+            <div class="slide-ele slide1"></div>
+            <div class="slide-ele slide2"></div>
+            <div class="slide-ele slide3"></div>
+        </div>
+    </div>
+</body>
+</html>
