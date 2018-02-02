@@ -20,18 +20,25 @@ $(function() {
 
 //点击list，显示列表
 $(".list").click(function(){
+    $(".close").animate({"right":"20px"},300);
     $(".close").css({
         "display":"block",
         "z-index":1
     });
-    $(".close").animate({"right":"20px"},500);
+    $(".list-items").css({
+        "display":"block"
+    });
+
 });
 
 //点击close，关闭列表
 $(".close").click(function(){
-    $(".close").animate({"right":"0"},500,function(){
+    $(".close").animate({"right":"0"},300,function(){
         $(".close").css({
             "display":"none"
         });
     });
+    $(".list-items").css({
+        "display":"none"
+    })
 });
