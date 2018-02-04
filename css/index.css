@@ -1,5 +1,4 @@
 body {
-  height: 3000px;
   overflow-x: hidden; }
 
 .header {
@@ -30,12 +29,137 @@ body {
       text-decoration: underline; }
   .header .list {
     display: none; }
+  .header .close {
+    display: none; }
+  .header .list-items {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1; }
+    .header .list-items ul {
+      width: 100%;
+      height: 100%; }
+      .header .list-items ul li {
+        height: 50px;
+        border-bottom: 1px solid #333;
+        line-height: 50px;
+        text-align: center; }
+        .header .list-items ul li a {
+          color: #fff;
+          width: 100%;
+          font-size: 18px; }
+      .header .list-items ul li:last-child {
+        border-bottom: none; }
 
 .slide-full {
   width: 100%;
-  height: 710px;
+  height: 680px;
   position: relative;
   overflow: hidden; }
+
+.products {
+  width: 100%;
+  display: flex;
+  padding-top: 2px;
+  border-sizing: border-box; }
+  .products div {
+    flex: 1;
+    height: 320px; }
+  .products .prd1 {
+    background: url("../img/pic1.jpg") no-repeat center top;
+    background-size: cover; }
+  .products .prd2 {
+    background: url("../img/pic2.jpg") no-repeat center top;
+    margin: 0 2px;
+    background-size: cover; }
+  .products .prd3 {
+    background: url("../img/pic3.jpg") no-repeat center top;
+    background-size: cover; }
+
+footer {
+  width: 100%;
+  background: #f0f0f0; }
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 0 30px; }
+    footer .container .row {
+      width: 100%;
+      display: flex; }
+      footer .container .row h3 {
+        font-size: 18px;
+        font-weight: 400;
+        color: #666666;
+        margin-bottom: 20px; }
+    footer .container .ulbox {
+      width: 100%;
+      overflow: hidden; }
+      footer .container .ulbox li {
+        margin-bottom: 5px;
+        line-height: 21px;
+        font-size: 14px; }
+      footer .container .ulbox .firstUl {
+        width: 100%; }
+        footer .container .ulbox .firstUl a {
+          color: #999; }
+    footer .container .col-1 {
+      width: 33%; }
+      footer .container .col-1 .ulbox ul {
+        float: left;
+        width: 168px; }
+        footer .container .col-1 .ulbox ul a {
+          color: #999; }
+    footer .container .col-2 {
+      width: 25%; }
+    footer .container .col-3 {
+      width: 16.66%; }
+    footer .container .col-4 {
+      width: 16.66%; }
+      footer .container .col-4 h3 {
+        text-align: center; }
+      footer .container .col-4 .codes .imgs {
+        width: 100%;
+        margin-bottom: 3px;
+        text-align: center; }
+        footer .container .col-4 .codes .imgs span {
+          display: inline-block;
+          margin: 0 2px;
+          text-align: center; }
+          footer .container .col-4 .codes .imgs span strong {
+            width: 88px;
+            height: 88px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+          footer .container .col-4 .codes .imgs span img {
+            width: 80px;
+            height: 80px; }
+          footer .container .col-4 .codes .imgs span em {
+            margin-top: 6px;
+            font-size: 12px;
+            color: #999; }
+      footer .container .col-4 .codes .text {
+        text-align: center; }
+        footer .container .col-4 .codes .text strong {
+          font-size: 20px;
+          font-weight: 400;
+          color: #666; }
+        footer .container .col-4 .codes .text em {
+          font-size: 12px;
+          color: #999; }
+  footer .copyright {
+    margin-top: 80px;
+    padding: 30px 20px 0;
+    border-top: 1px solid #ddd;
+    color: #999;
+    font-size: 12px; }
+    footer .copyright p {
+      text-align: center; }
 
 @media only screen and (max-width: 767px) {
   .header {
@@ -60,4 +184,69 @@ body {
       height: 20px;
       position: absolute;
       right: 0;
-      top: 15px; } }
+      top: 15px;
+      display: none; }
+  .products {
+    display: block; }
+    .products div {
+      width: 100%;
+      height: 200px;
+      background-position: center center; }
+  footer .container {
+    padding: 15px 0 30px; }
+  footer .copyright {
+    margin-top: 0;
+    border-top: none; }
+    footer .copyright span {
+      display: block; }
+  footer .container .row {
+    display: block; }
+    footer .container .row .footer-list {
+      border-bottom: 1px solid #ccc; }
+      footer .container .row .footer-list h3 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 14px; }
+      footer .container .row .footer-list .ulbox li {
+        font-size: 12px;
+        margin-bottom: 13.88889px;
+        padding-left: 10px; }
+      footer .container .row .footer-list .ulbox .firstUl, footer .container .row .footer-list .ulbox .secondUl {
+        width: 100%; }
+    footer .container .row .footer-list:after {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 22px;
+      background: #f0f0f0;
+      text-align: center;
+      line-height: 22px;
+      right: 19px;
+      top: 0;
+      content: "+";
+      font-size: 14px;
+      font-weight: 400; }
+  footer .container .col-1, footer .container .col-2, footer .container .col-3, footer .container .col-4 {
+    display: block;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: relative; }
+    footer .container .col-1 .ulbox, footer .container .col-2 .ulbox, footer .container .col-3 .ulbox, footer .container .col-4 .ulbox {
+      display: none; }
+  footer .container .col-4 h3 {
+    text-align: left; }
+  footer .container .col-4 .ulbox .imgs {
+    text-align: left; }
+  footer .container .col-4 .ulbox .text {
+    text-align: left; }
+    footer .container .col-4 .ulbox .text strong {
+      font-size: 14px; } }
+
+@media only screen and (max-width: 1068px) and (min-width: 767px) {
+  footer .container .col-1, footer .container .col-2, footer .container .col-3, footer .container .col-4 {
+    width: 25%; }
+  footer .container {
+    max-width: 980px; }
+  footer {
+    padding-left: 10px; } }

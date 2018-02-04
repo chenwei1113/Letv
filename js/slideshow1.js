@@ -107,31 +107,22 @@ function SlideShow($obj){
             "left": 100/that.imgs.length+"%"
         });
         $(this.boxDom).find($(".uls")).children().eq(0).find("i").css({
-           "backgroundColor": that.btnHighColor,
+            "backgroundColor": that.btnHighColor,
             "height": "2px",
         });
         $(".leftArrow").css({"display":"none"});
         $(".rightArrow").css({"display":"none"});
     }
+    //自动播放
     this.autoPlay = function(){
-        let that = this;
-        this.myTimer = setInterval(function(){
-            let outOrd = that.ord;
-            that.ord++;
+        this.myTimer = setInterval(()=>{
+            let outOrd = this.ord;
+            this.ord++;
             //数据合法性判断
-            if(that.ord>that.imgs.length-1){
-                that.ord = 0;
+            if(this.ord>this.imgs.length-1){
+                this.ord = 0;
             }
-
-
-            //改变外观
-            let $imgs = $(".slide-wrap").find("div");
-            $imgs.eq(outOrd).animate({"left":0},500,function(){
-                $imgs.eq(outOrd).css({"left":2*100/that.imgs.length+"%"});
-            });
-            $imgs.eq(that.ord).animate({"left":100/that.imgs.length+"%"},500);
-            //改变ul中li的颜色
-            $(".uls").children().eq(that.ord).find("i").css({"backgroundColor":that.btnHighColor,"height":"2px"}).parent().siblings().find("i").css({"backgroundColor":that.btnColor,"height":"1px"});
+            this.changeUI(outOrd,this.ord);
         },this.timeSpace);
     };
 
@@ -140,23 +131,25 @@ function SlideShow($obj){
         window.clearInterval(this.myTimer);
     }
 
+    this.changeUI = function(outOrd,inOrd){
+        //改变外观
+        let $imgs = $(".slide-wrap").find("div");
+        $imgs.eq(outOrd).animate({"left":0},500,()=>{
+            $imgs.eq(outOrd).css({"left":2*100/this.imgs.length+"%"});//????????????????????????????
+        });
+        console.log(this.imgs.length);
+        $imgs.eq(inOrd).animate({"left":100/this.imgs.length+"%"},500);
+        //改变ul中li的颜色
+        $(".uls").children().eq(inOrd).find("i").css({"backgroundColor":this.btnHighColor,"height":"2px"}).parent().siblings().find("i").css({"backgroundColor":this.btnColor,"height":"1px"});
+    }
     //跳转到指定图片
     this.goImg = function(transOrd){
-        var that = this;
         if(this.ord == transOrd){//如果进入的图片序号和出去的图片一致，则啥也不干。
             return;
         }
         let outOrd = this.ord;
         this.ord = transOrd;
-
-        //改变外观
-        let $imgs = $(".slide-wrap").find("div");
-        $imgs.eq(outOrd).animate({"left":0},500,function(){
-            $imgs.eq(outOrd).css({"left":2*100/that.imgs.length+"%"});
-        });
-        $imgs.eq(this.ord).animate({"left":100/that.imgs.length+"%"},500);
-        //改变ul中li的颜色
-        $(".uls").children().eq(that.ord).find("i").css({"backgroundColor":that.btnHighColor,"height":"2px"}).parent().siblings().find("i").css({"backgroundColor":that.btnColor,"height":"1px"});
+        this.changeUI(outOrd,this.ord);
     }
 
     //初始化事件
