@@ -192,6 +192,27 @@ footer {
       width: 100%;
       height: 200px;
       background-position: center center; }
+  #slideshow {
+    width: 100% !important;
+    height: 274.30556px !important; }
+    #slideshow .slide-wrap {
+      height: 274.30556px !important; }
+      #slideshow .slide-wrap div {
+        height: 274.30556px !important; }
+        #slideshow .slide-wrap div:first-child {
+          background-image: url(../img/1.jpg) !important; }
+        #slideshow .slide-wrap div:nth-child(2) {
+          background-image: url(../img/2.jpg) !important; }
+        #slideshow .slide-wrap div:nth-child(3) {
+          background-image: url(../img/3.jpg) !important; }
+    #slideshow .uls li {
+      width: 41.66667px !important; }
+      #slideshow .uls li i {
+        width: 41.66667px !important; }
+    #slideshow .leftArrow, #slideshow .rightArrow {
+      display: none !important; }
+    #slideshow .footer-list .ulbox {
+      display: none !important; }
   footer .container {
     padding: 15px 0 30px; }
   footer .copyright {
