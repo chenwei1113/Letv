@@ -267,7 +267,37 @@ footer{
     }
   }
 //-----------轮播图部分变化
-
+  #slideshow {
+    width: 100% !important;
+    height: 274.30556px !important;
+    .slide-wrap {
+      height: 274.30556px !important;
+      div {
+        height: 274.30556px !important;
+        &:first-child {
+          background-image: url(../img/1.jpg) !important;
+        }
+        &:nth-child(2) {
+          background-image: url(../img/2.jpg) !important;
+        }
+        &:nth-child(3) {
+          background-image: url(../img/3.jpg) !important;
+        }
+      }
+    }
+    .uls li {
+      width: 41.66667px !important;
+      i {
+        width: 41.66667px !important;
+      }
+    }
+    .leftArrow,.rightArrow {
+      display: none !important;
+    }
+    .footer-list .ulbox {
+      display: none !important;
+    }
+  }
 
 
   //------------页面尾部变化-------------
