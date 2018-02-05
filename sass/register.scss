@@ -70,15 +70,6 @@ header {
       }
       span {
         float: right;
-        em {
-          display: inline-block;
-          vertical-align: middle;
-          width: 9px;
-          height: 15px;
-          background: url(../img/phone.png) no-repeat;
-          margin-right: 5px;
-          margin-top: -3px;
-        }
         a {
           color: #529bef;
           font-size: 14px;
@@ -92,6 +83,13 @@ header {
         border: 1px solid #ccc;
         margin-top: 15px;
         position: relative;
+        i {
+          width: 25px;
+          height: 29px;
+          display: inline-block;
+          margin: 6px 0 0 14px;
+          float: left;
+        }
       }
       .username {
         input {
@@ -105,21 +103,8 @@ header {
           font-size: 14px;
           float: left;
         }
-        i:first-child {
-          width: 25px;
-          height: 29px;
-          display: inline-block;
+        i {
           background-position: 4px 5px;
-          margin: 6px 0 0 14px;
-          float: left;
-        }
-        i:last-child {
-          width: 32px;
-          height: 27px;
-          background: url(../img/ma.png) no-repeat;
-          position: absolute;
-          right: 13px;
-          top: 7px;
         }
       }
       .userpass {
@@ -135,25 +120,83 @@ header {
           float: left;
         }
         i {
-          width: 25px;
-          height: 29px;
-          display: inline-block;
           background-position: -198px 3px;
-          margin: 6px 0 0 14px;
+        }
+      }
+      .checkcode {
+        input {
+          position: absolute;
+          left: 45px;
+          height: 23px;
+          line-height: 23px;
+          color: #333;
+          padding: 9px 0 10px;
+          width: 205px;
+          font-size: 14px;
           float: left;
         }
+        i {
+          background-position: -296px 8px;
+        }
+        span {
+          float: right;
+          width: 100px;
+          height: 40px;
+          display: inline-block;
+          text-align: center;
+          line-height: 40px;
+          font-size: 24px;
+          letter-spacing: 3px;
+          color: #419ce3;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .telcheckcode {
+        margin: 0;
+        float: left;
+        width: 228px;
+        input {
+          position: absolute;
+          left: 45px;
+          height: 23px;
+          line-height: 23px;
+          color: #333;
+          padding: 9px 0 10px;
+          width: 176px;
+          font-size: 14px;
+          float: left;
+        }
+        i {
+          background-position: -398px 7px;
+        }
+      }
+      #getmobilecode {
+        float: right;
+        width:134px;
+        height: 40px;
+        border: 1px solid #419ce3;
+        font-size: 14px;
+        text-align: center;
+        line-height: 40px;
+        color: #419ce3;
+      }
+      div.wrap {
+        border: none;
+        margin-top: 15px;
       }
       .reme {
         border: none;
-        margin-top: 0;
+        margin-top: 2px;
         line-height: 42px;
-        font-size: 14px;
+        font-size: 12px;
         input {
           vertical-align: middle;
         }
         a {
-          float: right;
           color: #529bef;
+          text-decoration: underline;
         }
       }
       input[type='submit'] {
@@ -171,84 +214,6 @@ header {
       }
     }
 
-    .regi {
-      width: 328px;
-      margin: 80px auto 0;
-      text-align: center;
-      color: #969696;
-      font-size: 16px;
-      a {
-        color: #009de6;
-      }
-    }
-    .login-more {
-      width: 328px;
-      margin: 0 auto;
-      .otherway {
-        height: 16px;
-        width: 100%;
-        position: relative;
-        border-bottom: 1px solid #dbdbdb;
-        span {
-          position: absolute;
-          color: #dbdbdb;
-          left: 50%;
-          transform: translate(-50%);
-          top: 50%;
-          background: #fff;
-          width: 90px;
-          text-align: center;
-        }
-      }
-    }
-    .regi-more {
-      position: relative;
-      height: 34px;
-      margin-top: 12px;
-      padding-left: 100px;
-      ul {
-        float: left;
-        margin: auto;
-        width: 125px;
-        height: 34px;
-        overflow: hidden;
-        & :first-child a {
-          background-position: 0 0;
-        }
-        & :nth-child(2) a {
-          background-position: -46px 0;
-        }
-        & :nth-child(3) a {
-          background-position: -89px 0;
-        }
-        & :nth-child(4) a {
-          background-position: -134px 0;
-        }
-        & :nth-child(5) a {
-          background-position: -179px 0;
-        }
-        & :nth-child(6) a {
-          background-position: -223px 0;
-        }
-      }
-      li {
-        float: left;
-        a {
-          display: block;
-          width: 34px;
-          height: 34px;
-          background: url(../img/regi_more.png) no-repeat;
-          margin-right: 5px;
-        }
-      }
-      .more {
-        color: #999;
-        float: left;
-        margin-top: 8px;
-      }
-    }
   }
 }
-
-
 

@@ -14,7 +14,6 @@ $(function() {
         "btnHeight": 1,
         "imgs": ["../img/slide1.jpg", "../img/slide2.jpg", "../img/slide3.jpg"]
     });
-
 });
 
 
